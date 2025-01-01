@@ -32,7 +32,7 @@ Matrix multiplication is a fundamental operation in many computational fields, a
 └── v3                    # Direct C implementation as shared library
     ├── Makefile          # Build instructions for v3
     ├── matrix_mul.c      # C code for matrix multiplication
-│   ├── *.so              # Compiled C shared library 
+    ├── *.so              # Compiled C shared library 
     └── main.py           # Python script loading the shared library
 ```
 

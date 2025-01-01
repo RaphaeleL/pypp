@@ -16,6 +16,7 @@ Matrix multiplication is a fundamental operation in many computational fields, a
 ```
 .
 ├── README.md             # This file
+├── Makefile              # Global Build instructions
 ├── plain.py              # Python-only matrix multiplication
 ├── v1                    # C-based solution using ctypes
 │   ├── Makefile          # Build instructions for v1

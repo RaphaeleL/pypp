@@ -2,7 +2,7 @@
 #include <Python.h>
 
 // Matrix multiplication function
-static PyObject* matrix_mul(PyObject* self, PyObject* args) {
+static PyObject* matrix_mul_v2(PyObject* self, PyObject* args) {
     PyObject *mat1, *mat2;
     if (!PyArg_ParseTuple(args, "OO", &mat1, &mat2)) {
         return NULL;  // Error parsing arguments
@@ -51,21 +51,21 @@ static PyObject* matrix_mul(PyObject* self, PyObject* args) {
 
 // Define module methods
 static PyMethodDef MatrixMethods[] = {
-    {"matrix_mul", matrix_mul, METH_VARARGS, "Perform matrix multiplication."},
+    {"matrix_mul_v2", matrix_mul_v2, METH_VARARGS, "Perform matrix multiplication."},
     {NULL, NULL, 0, NULL}
 };
 
 // Define the module
 static struct PyModuleDef matrixmodule = {
     PyModuleDef_HEAD_INIT,
-    "matrix_mul",  // Name of the module
+    "matrix_mul_v2",  // Name of the module
     NULL,          // Optional documentation string
     -1,            // State (-1 means global state)
     MatrixMethods
 };
 
 // Initialize the module
-PyMODINIT_FUNC PyInit_matrix_mul(void) {
+PyMODINIT_FUNC PyInit_matrix_mul_v2(void) {
     return PyModule_Create(&matrixmodule);
 }
 

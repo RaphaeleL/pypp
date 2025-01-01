@@ -19,7 +19,7 @@ Matrix multiplication is a fundamental operation in many computational fields, a
 ├── plain.py              # Python-only matrix multiplication
 ├── v1                    # C-based solution using ctypes
 │   ├── Makefile          # Build instructions for v1
-│   ├── lib_matrix_mul.so # Compiled C shared library
+│   ├── *.so              # Compiled extension module
 │   ├── main.py           # Python script using C with ctypes
 │   └── matrix_mul.c      # C code for matrix multiplication
 ├── v2                    # Python C extension module
@@ -27,12 +27,12 @@ Matrix multiplication is a fundamental operation in many computational fields, a
 │   ├── build             # Build artifacts
 │   ├── main.py           # Python script using the extension module
 │   ├── matrix_mul.c      # C code for matrix multiplication
-│   ├── matrix_mul.cpython-313-darwin.so  # Compiled extension module
+│   ├── *.so              # Compiled extension module
 │   └── setup.py          # Setup script for building v2 extension
 └── v3                    # Direct C implementation as shared library
     ├── Makefile          # Build instructions for v3
     ├── matrix_mul.c      # C code for matrix multiplication
-    ├── matrix_mul.so     # Compiled shared library
+│   ├── *.so              # Compiled extension module
     └── main.py           # Python script loading the shared library
 ```
 

@@ -1,4 +1,4 @@
-import matrix_mul
+import matrix_mul_v3
 import random, time
 
 # Generate NxN matrices with random integers
@@ -10,7 +10,7 @@ mat2 = [[random.randint(1, 10) for _ in range(size)] for _ in range(size)]
 start_time = time.time()
 
 # Perform matrix multiplication
-_ = matrix_mul.matrix_mul(mat1, mat2)
+_ = matrix_mul_v3.matrix_mul_v3(mat1, mat2)
 
 # Time taken
 end_time = time.time()

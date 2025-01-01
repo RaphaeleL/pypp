@@ -2,11 +2,11 @@ import ctypes
 import random, time
 
 # Load the shared library
-lib = ctypes.CDLL('./lib_matrix_mul.so')
+lib = ctypes.CDLL('./matrix_mul.so')
 
 # Specify argument and return types for the matrix_mul function
 lib.matrix_mul.argtypes = (
-    ctypes.POINTER(ctypes.c_int),  # mat1
+    ctypes.POINTER(ctypes.c_int), # mat1
     ctypes.c_int,                 # rows1
     ctypes.c_int,                 # cols1
     ctypes.POINTER(ctypes.c_int), # mat2
@@ -18,7 +18,7 @@ lib.matrix_mul.restype = ctypes.POINTER(ctypes.c_int)  # Returns pointer to int 
 # Specify argument for the free_matrix function
 lib.free_matrix.argtypes = (ctypes.POINTER(ctypes.c_int),)
 
-# Generate 100x100 matrices with random integers
+# Generate NxN matrices with random integers
 size = 1_000
 mat1 = [[random.randint(1, 10) for _ in range(size)] for _ in range(size)]
 mat2 = [[random.randint(1, 10) for _ in range(size)] for _ in range(size)]

@@ -1,9 +1,10 @@
-create: 
-	gcc -shared -o lib_matrix_mul.so -fPIC matrix_mul.c
+all: build run clean
+
+build: 
+	@gcc -shared -o matrix_mul.so -fPIC matrix_mul.c
 
 run:
-	python3 main.py
+	@python3 main.py
 
-compare: 
-	python3 main.py
-	python3 ../plain.py
+clean:
+	@rm -rf matrix_mul.so

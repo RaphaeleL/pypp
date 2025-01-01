@@ -65,6 +65,8 @@ As seen, the C-based implementations (either with `ctypes` or as a Python extens
 
 ## How to Run
 
+Running `make help` in the root directory provides a comprehensive overview of available commands. Below are additional explanations for your reference.
+
 ### 1. **Pure Python Implementation**
 
 To run the Python-only version, simply execute:

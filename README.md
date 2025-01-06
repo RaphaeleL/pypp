@@ -4,6 +4,8 @@ This project demonstrates the performance comparison of matrix multiplication im
 
 ## How to Run
 
+> If you want to compare all, simply use `run.sh`
+
 - Run a 100% C Version: `make -C basic_c -B`
 - Run a 100% Python Version: `make -C basic_py -B`
 - Run C in Python3 with Shared Libs and Ctypes for the Datatypes: `make -C ctypes -B`

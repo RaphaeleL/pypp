@@ -14,4 +14,4 @@ _ = matrix_mul_v3.matrix_mul_v3(mat1, mat2)
 
 # Time taken
 end_time = time.time()
-print(f"Time taken for {size}x{size} matrix multiplication in C with Python.h: {end_time - start_time} seconds")
+print(f"{round(end_time - start_time, 2)}s")

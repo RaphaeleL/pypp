@@ -52,4 +52,4 @@ lib.free_matrix(result_ptr)
 
 # Time taken
 end_time = time.time()
-print(f"Time taken for {size}x{size} matrix multiplication in C with ctypes  : {end_time - start_time} seconds")
+print(f"{round(end_time - start_time, 2)}s")

@@ -62,8 +62,7 @@ int main() {
     // Calculate the elapsed time in seconds
     double time_taken = ((double)(end - start)) / CLOCKS_PER_SEC;
 
-    /* print(f"Time taken for {size}x{size} matrix multiplication in Plain Python3  : {end_time - start_time} seconds") */
-    printf("Time taken for %dx%d matrix multiplication in Plain C            : %.10f seconds\n", size, size, time_taken);
+    printf("%02.2fs\n", time_taken);
 
     // Free allocated memory
     free_matrix(mat1);

@@ -34,4 +34,4 @@ _ = matrix_multiply(mat1, mat2)
 
 # Time taken
 end_time = time.time()
-print(f"Time taken for {size}x{size} matrix multiplication in P: {end_time - start_time} seconds")
+print(f"Time taken for {size}x{size} matrix multiplication in Plain Python3  : {end_time - start_time} seconds")

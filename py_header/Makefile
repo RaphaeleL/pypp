@@ -1,6 +1,6 @@
 PYTHON_CONFIG = python3-config
-CFLAGS = -I$(shell $(PYTHON_CONFIG) --includes) -fPIC -arch arm64
-LDFLAGS = $(shell $(PYTHON_CONFIG) --ldflags) -shared -arch arm64
+CFLAGS = -I$(shell $(PYTHON_CONFIG) --includes) -fPIC #-arch arm64
+LDFLAGS = $(shell $(PYTHON_CONFIG) --ldflags) -shared #-arch arm64
 LIBS = -lpython3.13
 TARGET = matrix_mul_v3.so
 

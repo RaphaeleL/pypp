@@ -1,4 +1,4 @@
-#include "../ctypes/matrix_mul.c"
+#include "../ctypes/ccms_ccore_matrix.c"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -47,7 +47,7 @@ int main() {
     clock_t start = clock();
 
     // Perform matrix multiplication
-    int* result = matrix_mul(mat1, size, size, mat2, size, size);
+    int* result = mul(mat1, size, size, mat2, size, size);
     
     // Stop the timer
     clock_t end = clock();

@@ -1,4 +1,4 @@
-import ccms_ccore_matrix
+from ccms_ccore_matrix import mul
 import random, time
 
 # Generate NxN matrices with random integers
@@ -10,7 +10,7 @@ mat2 = [[random.randint(1, 10) for _ in range(size)] for _ in range(size)]
 start_time = time.time()
 
 # Perform matrix multiplication
-_ = ccms_ccore_matrix.mul(mat1, mat2)
+_ = mul(mat1, mat2)
 
 # Time taken
 end_time = time.time()

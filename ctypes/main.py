@@ -2,10 +2,10 @@ import ctypes
 import random, time
 
 # Load the shared library
-lib = ctypes.CDLL('./matrix_mul.so')
+lib = ctypes.CDLL('./ccms_ccore_matrix.so')
 
 # Specify argument and return types for the matrix_mul function
-lib.matrix_mul.argtypes = (
+lib.mul.argtypes = (
     ctypes.POINTER(ctypes.c_int), # mat1
     ctypes.c_int,                 # rows1
     ctypes.c_int,                 # cols1
@@ -13,7 +13,7 @@ lib.matrix_mul.argtypes = (
     ctypes.c_int,                 # rows2
     ctypes.c_int,                 # cols2
 )
-lib.matrix_mul.restype = ctypes.POINTER(ctypes.c_int)  # Returns pointer to int array
+lib.mul.restype = ctypes.POINTER(ctypes.c_int)  # Returns pointer to int array
 
 # Specify argument for the free_matrix function
 lib.free_matrix.argtypes = (ctypes.POINTER(ctypes.c_int),)
@@ -37,7 +37,7 @@ array1 = (ctypes.c_int * len(flat_mat1))(*flat_mat1)
 array2 = (ctypes.c_int * len(flat_mat2))(*flat_mat2)
 
 # Call the matrix_mul function
-result_ptr = lib.matrix_mul(array1, rows1, cols1, array2, rows2, cols2)
+result_ptr = lib.mul(array1, rows1, cols1, array2, rows2, cols2)
 if not result_ptr:
     raise ValueError("Matrix multiplication failed due to dimension mismatch.")
 

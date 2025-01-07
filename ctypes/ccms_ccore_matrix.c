@@ -1,7 +1,7 @@
 #include <stdlib.h>
 
 // Function to perform matrix multiplication
-int* matrix_mul(int* mat1, int rows1, int cols1, int* mat2, int rows2, int cols2) {
+int* mul(int* mat1, int rows1, int cols1, int* mat2, int rows2, int cols2) {
     if (cols1 != rows2) {
         return NULL;  // Dimension mismatch
     }

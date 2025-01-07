@@ -1,10 +1,10 @@
 all: build run clean
 
 build: 
-	@gcc -shared -o matrix_mul.so -fPIC matrix_mul.c
+	@gcc -shared -o ccms_ccore_matrix.so -fPIC ccms_ccore_matrix.c
 
 run:
 	@python3 main.py
 
 clean:
-	@rm -rf matrix_mul.so
+	@rm -rf ccms_ccore_matrix.so

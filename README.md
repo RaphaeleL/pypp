@@ -10,6 +10,8 @@ Simply use `make benchmark`. To run the benchmark on a specific implementation, 
 
 ## Performance Comparison
 
+> **Note:** The performance results may vary based on the system you are using. 
+
 For a 1000x1000 matrix multiplication, the performance results are as follows:
 
 | Implementation                                                                    | Time Taken (Linux, 16 GB) |

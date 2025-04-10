@@ -20,6 +20,6 @@ For a 1000x1000 matrix multiplication, the performance results are as follows:
 | **C**                                                                             | 4.32 sec                  |
 | **Python3 with C Backend** through Shared Libs and Ctypes                         | 5.46 sec                  |
 | **Python3 with C Backend** through Shared Libs and the 'Python.h' Headerfile      | 18.71 sec                 |
-| **Python3**                                                                       | 101.61 sec                |
+| **Python3**                                                                       | **101.61 sec**            |
 
 The performance results may vary based on the system you are using and do not include the time taken to compile the C and Go implementations.

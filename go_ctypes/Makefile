@@ -7,4 +7,4 @@ run:
 	@python3 main.py
 
 clean:
-	@rm -rf main.so
+	@rm -rf main.so main.h

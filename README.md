@@ -12,19 +12,19 @@ Simply use `make benchmark`. To run the benchmark on a specific implementation, 
 
 For a 1000x1000 matrix multiplication, the performance results are as follows:
 
-| Implementation                                                                    | Time Taken                |
-|-----------------------------------------------------------------------------------|---------------------------|
-| **Python3 with Go Backend** through Shared Libs and Ctypes                        | 2.84 sec                  |
-| **Go**                                                                            | 3.67 sec                  |
-| **C**                                                                             | 4.32 sec                  |
-| **Python3 with C Backend** through Shared Libs and Ctypes                         | 5.46 sec                  |
-| **Python3 with C Backend** through Shared Libs and the 'Python.h' Headerfile      | 18.51 sec                 |
-| **Python3**                                                                       | **104.67 sec**            |
+| Implementation                                                                    | Time Taken (n/a)          | Time Taken (M1 Pro 16 GB) |
+|-----------------------------------------------------------------------------------|---------------------------|---------------------------|
+| **C**                                                                             | 4.32 sec                  | 2.19 sec                  |
+| **Go**                                                                            | 3.67 sec                  | 3.42 sec                  |
+| **Python3**                                                                       | **104.67 sec**            | 61.29 sec                 |
+| **Python3 with C Backend** through Shared Libs and Ctypes                         | 5.46 sec                  | 2.43 sec                  |
+| **Python3 with C Backend** through Shared Libs and the 'Python.h' Headerfile      | 18.51 sec                 | 8.48 sec                  |
+| **Python3 with Go Backend** through Shared Libs and Ctypes                        | **2.84 sec**              | **1.15 sec**              |
 
 The performance results may vary based on the system you are using and do not include the time taken to compile the C and Go implementations. In addition, there was no parallelism tricks used in Go. The Implementation of the Matrix multiplication is the same in each Language / Backend.
 
 ## Result 
 
-> Literally, everthing is better then Python3!
+> Literally, everthing is better then Python3! Somehow Python3 with the Go Background through Shared and CTypes is the fastest!
 
 The results show that using a backend like Go or C can significantly improve the performance of Python3. The native Python3 implementation is the slowest, while using Go or C as a backend can lead to substantial performance gains.

@@ -1,4 +1,4 @@
-#include "../ctypes/ccms_ccore_matrix.c"
+#include "../c_ctypes/ccms_ccore_matrix.c"
 
 #include <stdio.h>
 #include <stdlib.h>

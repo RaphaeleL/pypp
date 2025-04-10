@@ -1,27 +1,22 @@
-# CPY
+# Python3 in Fast 
 
-This project demonstrates the performance comparison of matrix multiplication implementations using Python and C. It includes several variations.
+This project demonstrates the performance comparison of matrix multiplication implementations using Python3 with different Backends.
 
 ## How to Run
 
-> If you want to compare all, simply use `run.sh`
+> **Note:** Install all compilers and interpreters before running the benchmarks
 
-- Run a 100% C Version: `make -C basic_c -B`
-- Run a 100% Python Version: `make -C basic_py -B`
-- Run C in Python3 with Shared Libs and Ctypes for the Datatypes: `make -C ctypes -B`
-- Run C in Python3 with Shared Libs and the 'Python.h' Header for the Datatypes: `make -C py_header -B`
+Simply use `make benchmark`. To run the benchmark on a specific implementation, just run the `make` command with the desired implementation folder. For example, to run the benchmark for the `C` implementation, use: `cd c; make`
 
 ## Performance Comparison
 
-For a 1000x1000 matrix multiplication, the performance results are as follows (MacBook Pro, M1 Pro, 16 GB):
+For a 1000x1000 matrix multiplication, the performance results are as follows:
 
-| Implementation                                                                    | Time Taken (M1 Pro, 16 GB) | Time Taken (Linux, 16 GB) |
-|-----------------------------------------------------------------------------------|----------------------------|---------------------------|
-| **100% C**                                                                        | 2.08 sec                   | 4.59 sec                  |
-| **C in Python3** with Shared Libs and **Ctypes for the Datatypes**                | 2.33 sec                   | 5.21 sec                  |
-| **C in Python3** with Shared Libs and **the 'Python.h' Header for the Datatypes** | 8.36 sec                   | 16.71 sec                 |
-| **100% Python3**                                                                  | 61.21 sec                  | 149.31 sec                |
-
-## Result
-
-As seen, the C-based implementations (either with `ctypes` or with the `Python.h` Header) are **significantly faster** than the pure Python solution.
+| Implementation                                                                    | Time Taken (Linux, 16 GB) |
+|-----------------------------------------------------------------------------------|---------------------------|
+| **Python3 with Go Backend** through Shared Libs and Ctypes                        | 3.01 sec                  |
+| **Go**                                                                            | 3.67 sec                  |
+| **C**                                                                             | 4.32 sec                  |
+| **Python3 with C Backend** through Shared Libs and Ctypes                         | 5.46 sec                  |
+| **Python3 with C Backend** through Shared Libs and the 'Python.h' Headerfile      | 18.71 sec                 |
+| **Python3**                                                                       | 101.61 sec                |

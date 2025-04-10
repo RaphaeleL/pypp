@@ -14,7 +14,7 @@ Simply use `make benchmark`. To run the benchmark on a specific implementation, 
 
 For a 1000x1000 matrix multiplication, the performance results are as follows:
 
-| Implementation                                                                    | Time Taken (Linux, 16 GB) |
+| Implementation                                                                    | Time Taken                |
 |-----------------------------------------------------------------------------------|---------------------------|
 | **Python3 with Go Backend** through Shared Libs and Ctypes                        | 3.01 sec                  |
 | **Go**                                                                            | 3.67 sec                  |

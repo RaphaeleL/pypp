@@ -10,7 +10,6 @@ Simply use `make benchmark`. To run the benchmark on a specific implementation, 
 
 ## Performance Comparison
 
-
 For a 1000x1000 matrix multiplication, the performance results are as follows:
 
 | Implementation                                                                    | Time Taken                |
@@ -22,4 +21,10 @@ For a 1000x1000 matrix multiplication, the performance results are as follows:
 | **Python3 with C Backend** through Shared Libs and the 'Python.h' Headerfile      | 18.71 sec                 |
 | **Python3**                                                                       | **101.61 sec**            |
 
-The performance results may vary based on the system you are using and do not include the time taken to compile the C and Go implementations.
+The performance results may vary based on the system you are using and do not include the time taken to compile the C and Go implementations. In addition, there was no parallelism tricks used in Go. The Implementation of the Matrix multiplication is the same in each Language / Backend.
+
+## Result 
+
+> Literally, everthing is better then Python3!
+
+The results show that using a backend like Go or C can significantly improve the performance of Python3. The native Python3 implementation is the slowest, while using Go or C as a backend can lead to substantial performance gains.

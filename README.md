@@ -4,13 +4,12 @@ This project demonstrates the performance comparison of matrix multiplication im
 
 ## How to Run
 
-> **Note:** Install all compilers and interpreters before running the benchmarks
+> **Note:** Install all compilers and interpreters before running the benchmarks.
 
 Simply use `make benchmark`. To run the benchmark on a specific implementation, just run the `make` command with the desired implementation folder. For example, to run the benchmark for the `C` implementation, use: `cd c; make`
 
 ## Performance Comparison
 
-> **Note:** The performance results may vary based on the system you are using. 
 
 For a 1000x1000 matrix multiplication, the performance results are as follows:
 
@@ -22,3 +21,5 @@ For a 1000x1000 matrix multiplication, the performance results are as follows:
 | **Python3 with C Backend** through Shared Libs and Ctypes                         | 5.46 sec                  |
 | **Python3 with C Backend** through Shared Libs and the 'Python.h' Headerfile      | 18.71 sec                 |
 | **Python3**                                                                       | 101.61 sec                |
+
+The performance results may vary based on the system you are using and do not include the time taken to compile the C and Go implementations.

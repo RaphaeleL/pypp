@@ -41,5 +41,5 @@ benchmark:
 	@$(MAKE) c_pyheader
 	@$(MAKE) go_ctypes
 	@$(MAKE) go_ctypes_parallel
-	@$(MAKE) go_ctypes_parallelgo_ctypes_parallel_aggressive
+	@$(MAKE) go_ctypes_parallel_aggressive
 

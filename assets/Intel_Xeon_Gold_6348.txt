@@ -1,0 +1,6 @@
+OS: Fedora Linux 41 x86_64
+Kernel: Linux 6.12.15-200.fc41.x86_64
+CPU: Intel(R) Xeon(R) Gold 6348 (4) @ 2.60 GHz
+GPU: VMware SVGA II Adapter
+Memory: 16 GiB
+Swap: 8.00 GiB

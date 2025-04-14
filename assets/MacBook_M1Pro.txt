@@ -1,0 +1,3 @@
+OS: MacOS
+CPU/GPU: M1 Pro 
+Unified Memory: 16 GiB

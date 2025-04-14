@@ -20,8 +20,8 @@ For a 1000x1000 matrix multiplication, the performance results are as follows:
 | **Python3 with C Backend** <sup>(1,2,3)</sup>  | 5.46 sec                   | 2.43 sec     |
 | **Python3 with C Backend** <sup>(1,2,4)</sup>  | 18.51 sec                  | 8.48 sec     |
 | **Python3 with Go Backend** <sup>(1,2,3)</sup> | 2.84 sec                   | 1.15 sec     |
-| **Python3 with Go Backend** <sup>(2,3,5)</sup> | **n/a**                    | **0.14 sec** |
-| **Python3 with Go Backend** <sup>(2,3,6)</sup> | **n/a**                    | **0.12 sec** |
+| **Python3 with Go Backend** <sup>(2,3,5)</sup> | **0.51**                   | **0.14 sec** |
+| **Python3 with Go Backend** <sup>(2,3,6)</sup> | **0.72**                   | **0.12 sec** |
 
 > (1) Sequential (2) through Shared Libs (3) through Ctypes (4) 'Python.h' Headerfile (5) Parallel (6) aggressive Parallelism
 
